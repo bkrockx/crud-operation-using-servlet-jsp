@@ -50,20 +50,16 @@ function deleteData(id){
 			Li = (ArrayList)itr.next();
 			lr = Li.iterator();
 			Integer id = (Integer)lr.next();
+			String name = (String)lr.next();
+			String department = (String)lr.next();
+			String password = (String)lr.next();
+			
 			%>
 			<tr>
 			<td><%=id%></td>
-			<%	
-			while(lr.hasNext())
-			{
-			
-				%>
-				<td> <%=lr.next()%></td>
-				
-				<%
-					
-			}
-			%>
+			<td><%=name%></td>
+			<td><%=department%></td>
+			<td><%=password%></td>
 			<td><input type="button" name="edit" value="edit" onclick="editData(<%=id%>);" ></td>
 				<td><input type="button" name="delete" value="Delete" onclick="deleteData(<%=id%>);"></td>
 			</tr>

@@ -56,8 +56,9 @@ public class Display3 extends HttpServlet {
 
 			request.setAttribute("userList",userList);
 			
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home1.jsp");
-			dispatcher.forward(request,response);
+			RequestDispatcher dispatcher1 = getServletContext().getRequestDispatcher("/home1.jsp");
+			dispatcher1.forward(request,response);
+			
 			conn.close();
 			
 		} catch (Exception e) {
